@@ -1,0 +1,735 @@
+/* GERAIS */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+#nav-bar {
+    position: relative;
+    
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(90deg,#0423705d, rgba(193, 152, 245, 0.6) 30.95%, #0423705d);
+}
+
+
+p,
+li {
+    color: #063FD4;
+    font-size: 2rem;
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+li {
+    display: flex;
+    flex-direction: inline;
+    padding: 15px;
+}
+
+a {
+    text-decoration: none;
+    color: #063FD4;
+    font-weight: bold;
+}
+
+
+a:hover {
+    background-color: #AF7CF2;
+    border-radius: 5px;
+}
+
+/* GERAIS */
+
+/* INICIO */
+/* TESTe */
+
+.inicio{
+    height: 110vh;
+}
+.CSSgal {
+    z-index: -1;
+	position: relative;
+	overflow: hidden;
+	height: 100%; /* Or set a fixed height */
+}
+
+/* SLIDER */
+
+.CSSgal .slider {
+	height: 100%;
+	white-space: nowrap;
+	font-size: 0;
+	transition: 0.8s;
+}
+
+/* SLIDES */
+
+.CSSgal .slider > * {
+	font-size: 1rem;
+	display: inline-block;
+	white-space: normal;
+	vertical-align: top;
+	height: 100%;
+	width: 100%;
+	background: none 50% no-repeat;
+	background-size: cover;
+}
+
+/* PREV/NEXT, CONTAINERS & ANCHORS */
+
+.CSSgal .prevNext {
+	position: absolute;
+	z-index: 1;
+	top: 50%;
+	width: 100%;
+	height: 0;
+}
+
+.CSSgal .prevNext > div+div {
+	visibility: hidden; /* Hide all but first P/N container */
+}
+
+.CSSgal .prevNext a {
+	background: #ffffff;
+	position: absolute;
+	width:       60px;
+	height:      60px;
+	line-height: 60px; /* If you want to place numbers */
+	text-align: center;
+	opacity: 0.7;
+	-webkit-transition: 0.3s;
+					transition: 0.3s;
+	-webkit-transform: translateY(-50%);
+					transform: translateY(-50%);
+	left: 0;
+}
+.CSSgal .prevNext a:hover {
+	opacity: 1;
+}
+.CSSgal .prevNext a+a {
+	left: auto;
+	right: 0;
+}
+
+/* NAVIGATION */
+
+.CSSgal .bullets {
+	position: absolute;
+	z-index: 2;
+	bottom: 0;
+	padding: 10px 0;
+	width: 100%;
+	text-align: center;
+}
+.CSSgal .bullets > a {
+	display: inline-block;
+	width:       30px;
+	height:      30px;
+	line-height: 30px;
+	text-decoration: none;
+	text-align: center;
+	background: rgba(255, 255, 255, 1);
+	-webkit-transition: 0.3s;
+					transition: 0.3s;
+}
+.CSSgal .bullets > a+a {
+	background: rgba(255, 255, 255, 0.5); /* Dim all but first */
+}
+.CSSgal .bullets > a:hover {
+	background: rgba(255, 255, 255, 0.7) !important;
+}
+
+/* NAVIGATION BUTTONS */
+/* ALL: */
+.CSSgal >s:target ~ .bullets >* {      background: rgba(255, 255, 255, 0.5);}
+/* ACTIVE */
+#s1:target ~ .bullets >*:nth-child(1) {background: rgba(255, 255, 255,   1);}
+#s2:target ~ .bullets >*:nth-child(2) {background: rgba(255, 255, 255,   1);}
+#s3:target ~ .bullets >*:nth-child(3) {background: rgba(255, 255, 255,   1);}
+#s4:target ~ .bullets >*:nth-child(4) {background: rgba(255, 255, 255,   1);}
+/* More slides? Add here more rules */
+
+/* PREV/NEXT CONTAINERS VISIBILITY */
+/* ALL: */
+.CSSgal >s:target ~ .prevNext >* {      visibility: hidden;}
+/* ACTIVE: */
+#s1:target ~ .prevNext >*:nth-child(1) {visibility: visible;}
+#s2:target ~ .prevNext >*:nth-child(2) {visibility: visible;}
+#s3:target ~ .prevNext >*:nth-child(3) {visibility: visible;}
+#s4:target ~ .prevNext >*:nth-child(4) {visibility: visible;}
+/* More slides? Add here more rules */
+
+/* SLIDER ANIMATION POSITIONS */
+
+#s1:target ~ .slider {transform: translateX(   0%); -webkit-transform: translateX(   0%);}
+#s2:target ~ .slider {transform: translateX(-100%); -webkit-transform: translateX(-100%);}
+#s3:target ~ .slider {transform: translateX(-200%); -webkit-transform: translateX(-200%);}
+#s4:target ~ .slider {transform: translateX(-300%); -webkit-transform: translateX(-300%);}
+/* More slides? Add here more rules */
+
+
+/* YOU'RE THE DESIGNER! 
+   ____________________
+   All above was mainly to get it working :)
+   CSSgal CUSTOM STYLES / OVERRIDES HERE: */
+
+.CSSgal{
+	color: #31042d;	
+	text-align: center;
+}
+.CSSgal .slider h2 {
+	margin-top: 40vh;
+	font-weight: 200;
+	letter-spacing: -0.06em;
+	word-spacing: 0.2em;
+	font-size: 3em;
+}
+.CSSgal a {
+	border-radius: 50%;
+	margin: 0 3px;
+	color: rgba(0,0,0,0.8);
+	text-decoration: none;
+}
+
+.CSSgal h2{
+    padding: 20px;
+    font-size: 3rem;
+    color:#ffffff ;
+    background-color: #0423705d;
+}
+
+.CSSgal p{
+    padding: 20px;
+    font-size: 2rem;
+    color:#ffffff ;
+    background-color: #0423705d;
+}
+
+   
+
+/* INICIO */
+
+.fundo {
+    width: 85%;
+    margin: auto;
+}
+
+
+
+
+/* PRIMEIRA SESSÃO */
+.primeira-grid {
+    display: grid;
+
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    gap: 10px;
+    height: 100%;
+
+}
+
+#item-text-0 {
+
+    grid-row-start: 1;
+    grid-column-start: 1;
+
+    grid-row-end: 2;
+    grid-column-end: 3;
+
+}
+
+#item-img-1 {
+    grid-row-start: 1;
+    grid-column-start: 3;
+
+    grid-row-end: 2;
+    grid-column-end: 4;
+}
+
+.position {
+    margin-top: 150px;
+    background: linear-gradient(180deg, #E7D0FF 15.1%, #E7D0FF 32.66%, rgba(194, 145, 245, 0.58) 63.49%, rgba(101, 77, 126, 0.26) 88.24%);;
+}
+
+.p-primeira-sessão {
+    font-size: 2rem;
+    text-align: justify;
+    padding: 30px 40px;
+   
+}
+
+/* PRIMEIRA SESSÃO */
+
+/*SEGUNDA SESSÂO*/
+
+
+.angry-grid {
+    display: grid;
+
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 10px;
+    height: 100%;
+
+}
+
+#item-metodologia-p-1 {
+
+    grid-row-start: 1;
+    grid-column-start: 2;
+
+    grid-row-end: 2;
+    grid-column-end: 3;
+
+}
+
+
+#item-metodologia-p-2 {
+
+
+
+    grid-row-start: 1;
+    grid-column-start: 1;
+
+    grid-row-end: 2;
+    grid-column-end: 2;
+
+
+}
+
+.titulo-primeira-sessão {
+    margin-top: 350px;
+    color: #063FD4;
+    text-align: center;
+    padding: 20px;
+}
+
+.p-segunda-sessão {
+    font-size: 2rem;
+    text-align: justify;
+}
+
+.books {
+    margin-top: 23%;
+    margin-left: 20%;
+}
+
+.p-segunda-sessão-pdl {
+    font-size: 2rem;
+    text-align: justify;
+    padding: 20px 30px;
+}
+
+/*SEGUNDA SESSÂO*/
+
+/*PRATIQUE E DESENVOLVA*/
+
+
+.pratique-desenvolva {
+    height: 110vh;
+    width: 85%;
+    margin: auto;
+}
+
+.fundo-color {
+    margin-top: 140px;
+    background: linear-gradient(90deg, rgba(149, 168, 216, 0.6), rgba(175, 124, 242, 0.6), rgba(193, 152, 245, 0.6) 30.95%, rgba(223, 194, 246, 0.6), rgba(220, 193, 248, 0.6), rgba(244, 199, 227, 1));
+}
+
+.titulo-sessão {
+    font-size: 3rem;
+    color: #063FD4;
+    text-align: center;
+    padding: 70px;
+}
+
+.container {
+    padding: 0 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card {
+    height: 280px;
+    max-width: 350px;
+    margin: 0 20px;
+    background: white;
+    transition: 0.4s;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.card:hover {
+    height: 470px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.card .img {
+    height: 200px;
+    width: 100%;
+}
+
+.card .img img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.card .top-text {
+    padding: 5px;
+}
+
+.card .top-text .name {
+    font-size: 25px;
+    font-weight: 600;
+    color: #202020;
+}
+
+.card .top-text p {
+    font-size: 20px;
+    font-weight: 600;
+    color: #e74c3c;
+    line-height: 20px;
+}
+
+.card .bottom-text {
+    padding: 0 20px 10px 20px;
+    margin-top: 5px;
+    background: white;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.1s;
+}
+
+.card:hover .bottom-text {
+    opacity: 1;
+    visibility: visible;
+}
+
+.card .bottom-text .text {
+    text-align: justify;
+}
+
+.card .bottom-text .btn {
+    margin: 10px 0;
+    text-align: left;
+}
+
+.card .bottom-text .btn a {
+    text-decoration: none;
+    background: #e74c3c;
+    color: #f2f2f2;
+    padding: 5px 8px;
+    border-radius: 3px;
+    display: inline-flex;
+    transition: 0.2s;
+}
+
+.card .bottom-text .btn a:hover {
+    transform: scale(0.9);
+}
+
+/*PRATIQUE E DESENVOLVA*/
+
+/*PLANOS*/
+
+.titulo-sessão-3 {
+    font-size: 3rem;
+    text-align: center;
+    color: #063FD4;
+}
+
+
+.terceira-sessão {
+    margin-top: 150px;
+}
+
+.money-grid {
+    display: grid;
+
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+
+    gap: 0px;
+    height: 100%;
+
+}
+
+#money-0 {
+
+    grid-row-start: 1;
+    grid-column-start: 3;
+
+    grid-row-end: 2;
+    grid-column-end: 4;
+
+}
+
+.planos-grid {
+    display: grid;
+
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    gap: 20px;
+    height: 100%;
+
+}
+
+#conve-0 {
+
+    grid-row-start: 1;
+    grid-column-start: 1;
+
+    grid-row-end: 2;
+    grid-column-end: 2;
+
+}
+
+#inglês-1 {
+
+    grid-row-start: 1;
+    grid-column-start: 2;
+
+    grid-row-end: 2;
+    grid-column-end: 3;
+
+}
+
+#alemao-2 {
+
+    grid-row-start: 1;
+    grid-column-start: 3;
+
+    grid-row-end: 2;
+    grid-column-end: 4;
+
+}
+
+#conve-0,
+#inglês-1,
+#alemao-2 {
+    text-align: center;
+    padding: 15px;
+    background-image: linear-gradient(180deg, #CFE8F5, #DBCDF7, rgba(219, 191, 255, 0.5), #FCF2FA, transparent);
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+}
+
+.plano-titulo {
+    font-size: 2rem;
+    color: #063FD4;
+    padding: 20px;
+}
+
+.plano-texto {
+    margin-top: 50px;
+    font-size: 1.5rem;
+    padding: 10px;
+}
+
+.preço {
+    font-size: 1.5rem;
+    color: #063FD4;
+}
+
+#botao2, #botao1,#botao3 {
+    padding: 20px 30px; /* Tamanho médio */
+    font-size: 20px;
+    background-color: #007bff; /* Cor de fundo azul */
+    border-radius: 10px; /* Cantos arredondados */
+    color: #fff; /* Cor do texto (branco) */
+    border: none; /* Remover a borda */
+    cursor: pointer; /* Mostrar cursor de ponteiro ao passar o mouse */
+    display: block; /* Tornar o botão um elemento de bloco */
+  }
+
+  #botao1{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 17%; 
+  }
+
+  #botao2{
+    margin-top: 140px;
+    margin-left: 17%; 
+  }
+
+  #botao3{
+    margin-top: 140px;
+    margin-left: 17%; 
+  }
+
+
+
+/*PLANOS*/
+
+/*DEPOIMENTOS*/
+
+#quarta-sessão {
+    margin-top: 150px;
+}
+
+.titulo-sessão-4 {
+    font-size: 3rem;
+    text-align: center;
+    padding-top: 50px;
+    color: #063FD4;
+}
+
+.quarta-sessão {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.testimonial {
+    position: relative;
+    max-width: 900px;
+    width: 90%;
+    padding: 50px 0;
+    overflow: hidden;
+    border-radius: 30px;
+    box-shadow: 5px 5px 5px 5px rgba(80, 68, 112, 0.6);
+    background-color: rgb(255, 255, 255);
+}
+
+.testimonial .image {
+    height: 130px;
+    width: 130px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.testimonial .slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    row-gap: 30px;
+    height: 100%;
+    width: 100%;
+}
+
+.slide p {
+    text-align: center;
+    padding: 0 160px;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #333;
+}
+
+.slide .quote-icon {
+    font-size: 30px;
+    color: #4070f4;
+}
+
+.slide .details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.details .name {
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+}
+
+.details .job {
+    font-size: 12px;
+    font-weight: 400;
+    color: #333;
+}
+
+/* swiper button css */
+.nav-btn {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    transform: translateY(30px);
+    background-color: rgba(0, 0, 0, 0.1);
+    transition: 0.2s;
+}
+
+.nav-btn:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.nav-btn::after,
+.nav-btn::before {
+    font-size: 20px;
+    color: #063FD4;
+}
+
+.swiper-pagination-bullet {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.swiper-pagination-bullet-active {
+    background-color: #4070f4;
+}
+
+/*MEUS ALUNOS*/
+
+@media screen and (max-width: 768px) {
+
+    #item-img-1{
+        display: none;
+    }
+
+    .books{
+        display: none;
+    }
+
+    #item-text-0{
+        grid-row-start: 1fr;
+        grid-column-start: 1fr 1fr;
+    
+        grid-row-end: 2;
+        grid-column-end: 3;
+    }
+
+    .Boneco_Comunicacao{
+        display: none; 
+    }
+
+    .slide p {
+        padding: 0 20px;
+    }
+
+    .nav-btn {
+        display: none;
+    }
+}
+
+
+
+
+
+@media screen and (max-width: 978px) {
+    .container {
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+
+    .card {
+        max-width: 700px;
+        margin: 20px 0;
+    }
+}
